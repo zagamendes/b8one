@@ -1,0 +1,94 @@
+.ctn-image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.ctn-wishlist {
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #e9ebee;
+  font-size: 20px;
+  color: #1c1c1c;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.ctn-wishlist:hover {
+  transform: scale(1.2);
+  color: #f3151b;
+  background-color: #ffcae0;
+}
+.favorite {
+  background-color: #f3151b;
+  color: white;
+  transition: all 0.2s;
+}
+.favorite:hover {
+  background-color: #e20f15;
+  color: white;
+}
+.ctn-image > img {
+  /* height: 100px !important; */
+  height: 100%;
+  object-fit: contain;
+}
+.ctn-shelf {
+  width: 290px;
+}
+.ctn-name {
+  font-size: 14px;
+  color: #1c1c1c;
+  font-weight: 500;
+}
+.ctn-name,
+.ctn-price,
+.ctn-promotional-price,
+.qtd-parcelamento {
+  align-self: flex-start;
+  font-family: Inter;
+}
+.ctn-promotional-price {
+  font-weight: 600;
+  font-size: 20px;
+  color: #f3151b;
+}
+.ctn-price {
+  color: #999a9b;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.qtd-parcelamento {
+  font-size: 12px;
+}
+.qtd-parcelamento span {
+  color: #737375;
+}
+.btn-success,
+.not-added,
+.not-added:focus {
+  background-color: #40b25c !important;
+  transition: all 0.2s;
+  font-family: Inter;
+  font-weight: 700;
+  color: white !important;
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-success:hover,
+.not-added:hover {
+  background-color: #1e9631 !important;
+}
+.added,
+.added:focus {
+  background-color: #a3f9b9 !important;
+  color: #1c1c1c !important;
+  box-shadow: none;
+  border: none !important;
+}

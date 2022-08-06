@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Shelf from "./components/Shelf/Shelf";
+import ProductProvider, { productContext } from "./contextos/productContext";
 
 function App() {
+  const { products } = useContext(productContext);
+  console.log(products);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App d-flex justify-content-around">
+      {products.map((product) => (
+        <Shelf key={product.name} product={product} />
+      ))}
     </div>
   );
 }
